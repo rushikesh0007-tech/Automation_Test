@@ -15,7 +15,17 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath="//input[@id='password']") WebElement txtPassword;
 	@FindBy(xpath="//button[@id='livis-login-btn']") WebElement btnLogin;
 	
-	
+
+    @FindBy(xpath = "//div[contains(text(), 'Please enter Email ID')]")
+    WebElement emailErrorMessage;
+
+    @FindBy(xpath = "//div[contains(text(), 'Please enter Password')]")
+    WebElement passwordErrorMessage;
+    
+    @FindBy(xpath = "//img[@alt='livis logo']") 
+    WebElement livisLogo;
+    
+			
 	public void setEmail(String email) {
 		txtEmail.sendKeys(email);
 		
@@ -25,7 +35,18 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void clickLogin() {
+		
 		btnLogin.click();
 	}
 
+	public String getEmailErrorMessage() {
+        return emailErrorMessage.getText();
+    }
+
+    public String getPasswordErrorMessage() {
+        return passwordErrorMessage.getText();
+    }
+    public boolean isLivisLogoDisplayed() {
+        return livisLogo.isDisplayed();
+    }
 }
