@@ -1,8 +1,6 @@
 package testCases;
-
+import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
-
-import dev.failsafe.internal.util.Assert;
 import pageObjects.AddWorkStationPage;
 import pageObjects.HomePage;
 
@@ -14,7 +12,7 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		hp.clickOnAddStation();
 		
 		AddWorkStationPage ws= new AddWorkStationPage(driver);
-		ws.setWorkStationName("statonA");
+		ws.setWorkStationName("statonY");
 		ws.setWSPlantName("PlantB");
 		ws.setWSLocationName("India");
 		ws.clickOnNextButton();
@@ -26,6 +24,11 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		ws.clickOnNextButton();
 		ws.clickOnCreateButton();
 		
+	}
+	
+	public String randomStrings() {
+	String generatedString=	RandomStringUtils.randomAlphabetic(5);
+		return generatedString;
 	}
 
 }

@@ -25,7 +25,7 @@ public class AddWorkStationPage extends BasePage{
 	@FindBy(xpath="//input[@name='camera.0.camera_address']") WebElement cameraIpField;
 	@FindBy(xpath="//input[contains(@name,'camera.0.camera_address')]") WebElement  submitButton;
 	@FindBy(xpath="(//button[@id='livis-button-id'])[2]") WebElement btnCreate;
-
+    
 	
 	public void setWorkStationName(String sname) {
 		txtWorkStationName.sendKeys(sname);

@@ -15,7 +15,7 @@ public class BaseClass {
 	public void setup() {
 		
 		 driver = new ChromeDriver();
-		 
+		 driver.manage().deleteAllCookies();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		 driver.get("https://demo.livis.ai/auth/login");
 		 driver.manage().window().maximize();
