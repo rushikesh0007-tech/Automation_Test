@@ -1,8 +1,11 @@
 package testCases;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
+
+import pageObjects.AddUseCasePage;
 import pageObjects.AddWorkStationPage;
 import pageObjects.HomePage;
+
 
 public class TC002_AddWorkstationTest extends TC001_LoginTest{
 	@Test(priority=2)
@@ -23,8 +26,36 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		ws.enterCameraIp("1");		
 		ws.clickOnNextButton();
 		ws.clickOnCreateButton();
-		
 	}
+	@Test(priority=3)
+	public void verify_addUseCase() {
+		HomePage hp1= new HomePage(driver);
+		hp1.clickonUseCaseButton();
+		AddUseCasePage uc=new AddUseCasePage(driver);
+		uc.clickOnAddUseCaseButton();
+		uc.setUserCaseName("tablet");
+		uc.setUseCaseDiscription("usecase discription");
+		uc.setClientName("lupin");
+		uc.setClientLocation("india");
+		uc.clickOnclNextButton();
+		uc.clickOnImage();
+		uc.clickNext();
+		uc.clickOnMaterialimage();
+		uc.clickNext();
+		uc.clickOnCatogoryImage();
+		uc.clickNext();
+		uc.clickonChoosePartimage();
+		uc.clickNext();
+		uc.clickoncreatedprocessimage();
+		uc.clickNext();
+		//uc.setFieldFeatures("tablet_frame");
+		uc.clickonExistancefeature();
+		uc.clickNext();
+		uc.clickOnCreateButton();
+		uc.clickOnPartButton();
+	}
+	
+	
 	
 	public String randomStrings() {
 	String generatedString=	RandomStringUtils.randomAlphabetic(5);

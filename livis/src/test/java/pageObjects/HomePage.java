@@ -13,8 +13,14 @@ public class HomePage extends BasePage {
 
 	 @FindBy(xpath="(//button[@type='button'][normalize-space()='Add Station'])[2]") WebElement btnAddStation;
  
+	 @FindBy(xpath="(//button[@type='button'][normalize-space()='Use Cases'])[1]") WebElement btnUseCase;
 	 
 	 public void clickOnAddStation() {
 		 btnAddStation.click();
+		 
 	 }
+	 public void clickonUseCaseButton() {
+		 btnUseCase.click();
+	 }
+	 
 }

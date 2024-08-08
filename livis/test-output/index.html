@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse--214604878\testng-customsuite.xml</span>
+                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1025578688\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="testCases.TC002_AddWorkstationTest" class="method navigator-link" hash-for-method="verify_Login">verify_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testCases.TC002_AddWorkstationTest" class="method navigator-link" hash-for-method="verify_addUseCase">verify_addUseCase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +143,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verify_addUseCase">
+                  </a> <!-- verify_addUseCase -->
+                  <span class="method-name">verify_addUseCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verify_addWorkStation">
                   </a> <!-- verify_addWorkStation -->
                   <span class="method-name">verify_addWorkStation</span>
@@ -148,7 +160,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse--214604878\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1025578688\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,20 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_addWorkStation')
+data.setCell(0, 1, 'verify_addUseCase')
 data.setCell(0, 2, 'testCases.TC002_AddWorkstationTest')
-data.setCell(0, 3, 3663);
+data.setCell(0, 3, 10692);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verify_Login')
+data.setCell(1, 1, 'verify_addWorkStation')
 data.setCell(1, 2, 'testCases.TC002_AddWorkstationTest')
-data.setCell(1, 3, 346);
+data.setCell(1, 3, 4335);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verify_Login')
+data.setCell(2, 2, 'testCases.TC002_AddWorkstationTest')
+data.setCell(2, 3, 368);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,11 +259,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verify_Login</span>
-                <span class="method-start">3783 ms</span>
+                <span class="method-start">3989 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verify_addWorkStation</span>
-                <span class="method-start">4132 ms</span>
+                <span class="method-start">4359 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verify_addUseCase</span>
+                <span class="method-start">8698 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

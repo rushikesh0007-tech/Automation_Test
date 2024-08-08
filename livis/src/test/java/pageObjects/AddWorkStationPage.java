@@ -78,4 +78,6 @@ public class AddWorkStationPage extends BasePage{
 	 public void clickOnCreateButton() {
 		 btnCreate.click();
 	 }
+	 
+	
 }
