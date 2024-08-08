@@ -2,6 +2,7 @@ package testCases;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 
+import pageObjects.AddPartPage;
 import pageObjects.AddUseCasePage;
 import pageObjects.AddWorkStationPage;
 import pageObjects.HomePage;
@@ -53,8 +54,19 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		uc.clickNext();
 		uc.clickOnCreateButton();
 		uc.clickOnPartButton();
+		AddPartPage apart= new AddPartPage(driver);
+		apart.clickonCreatepartButton();
+		apart.setPartName("dolo");
+		apart.setPartNumber("500");
+		apart.setPartDiscription("this is tablet discription");
+		apart.clickOnNext();
+		
 	}
-	
+	/*
+	 * @Test public void verify_Parts() { HomePage hp1= new HomePage(driver);
+	 * hp1.clickonUseCaseButton(); AddPartPage apart= new AddPartPage(driver);
+	 * apart.clickonCreatepartButton(); }
+	 */
 	
 	
 	public String randomStrings() {
