@@ -9,7 +9,7 @@ on:
 jobs:
   build_test:
 
-    runs-on: Windows 11 Home
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
 
    
   publish-job:
-    runs-on: Windows 11 Home
+    runs-on: windows-latest
     needs: build_test
     steps:
     - uses: actions/checkout@v3
