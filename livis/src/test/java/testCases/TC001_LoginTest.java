@@ -1,11 +1,5 @@
 package testCases;
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.Test;
-
-import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 public class TC001_LoginTest extends BaseClass  {
