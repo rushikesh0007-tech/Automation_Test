@@ -60,7 +60,7 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		apart.setPartNumber("500");
 		apart.setPartDiscription("this is tablet discription");
 		apart.clickOnNext();
-		apart.clickOnWithoutEdgeButton();
+		//apart.clickOnWithoutEdgeButton();
 		//apart.clickoncreateButton();
 		//apart.clickOnNext();
 		//apart.clickOnUploadImage();
