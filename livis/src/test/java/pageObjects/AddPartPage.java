@@ -52,8 +52,9 @@ public class AddPartPage extends BasePage {
 	public void clickoncreateButton() {
 		btnCreate.click();
 	}
-	
+
 	public void clickOnUploadImage() {
 		btnClickonUploadimage.click();
 	}
+	
 }
