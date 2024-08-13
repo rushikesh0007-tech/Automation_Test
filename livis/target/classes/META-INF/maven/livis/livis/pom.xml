@@ -7,6 +7,9 @@
   <groupId>livis</groupId>
   <artifactId>livis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+ 
+ 
+ 
   <dependencies>  
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -72,10 +75,10 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.1</version>
 </dependency>
-
-
     
   </dependencies>
+  
+  
 
   
 </project>
