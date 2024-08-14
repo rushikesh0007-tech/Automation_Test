@@ -7,7 +7,6 @@
         <methods>
           <include name="verify_addWorkStation"/>
           <include name="setup"/>
-          <include name="verify_addUseCase"/>
         </methods>
       </class> <!-- testCases.TC002_AddWorkstationTest -->
     </classes>
