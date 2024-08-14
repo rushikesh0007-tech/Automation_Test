@@ -37,7 +37,7 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
     - run: mvn --batch-mode --update-snapshots verify
-      working-directory: ./Automation_Test/livis  # Ensure this path is correct
+      working-directory: ./livis  # Ensure this path is correct
     - run: mkdir staging && cp target/*.jar staging
       working-directory: ./livis   # Ensure this path is correct
     - uses: actions/upload-artifact@v3
