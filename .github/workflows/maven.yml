@@ -22,8 +22,8 @@ jobs:
 
       # Build the Maven project
       - name: Build Maven project
-        run: mvn -B package --file Automation_Test/livis/pom.xml
-
+        run: mvn -B package --file Automation_Test/livis/pom.xml      
+        working-directory: ./livis  
       # List the current directory
       - name: List the current directory
         run: ls -a
