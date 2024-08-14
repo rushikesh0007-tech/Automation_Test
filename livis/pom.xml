@@ -105,7 +105,9 @@
 						<configuration>
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>testCases</mainClass>
+									<mainClass>testCases.BaseClass</mainClass>
+									<mainClass>testCases.TC001_LoginTest</mainClass>
+									<mainClass>testCases.TC002_AddWorkstationTest</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
