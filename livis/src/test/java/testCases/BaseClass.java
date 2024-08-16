@@ -15,10 +15,9 @@ public class BaseClass {
 	
 	@BeforeClass
 	public void setup() {
-		ChromeOptions chromeoptions= new ChromeOptions();
-		chromeoptions.addArguments("headlessargument");
 		
-		 driver = new ChromeDriver(chromeoptions);
+
+		 driver = new ChromeDriver();
 		 driver.manage().deleteAllCookies();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		 driver.get("https://demo.livis.ai/auth/login");
