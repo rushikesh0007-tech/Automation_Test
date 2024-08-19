@@ -11,7 +11,7 @@ public class AddUseCasePage extends BasePage{
 		
 	}
 	
-	@FindBy(xpath="(//button[@type='button'][normalize-space()='Add Use Case'])[2]")  WebElement btnAddUseCase;
+	@FindBy(xpath="//button[normalize-space()='Add Use Case']")  WebElement btnAddUseCase;
 	@FindBy(xpath="//input[@name='usecase_name']") WebElement txtUserCaseName;
 	@FindBy(xpath="//textarea[@id='usecase_desc']") WebElement txtDiscription;
     @FindBy(xpath="//input[@id='usecase_client_name']") WebElement txtClientname;
