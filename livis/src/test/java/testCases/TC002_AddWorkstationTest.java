@@ -64,6 +64,11 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		apart.clickoncreateButton();
 		apart.clickOnNext();
 		apart.clickOnUploadImage();
+		String imageupload1="C:\\Users\\Admin\\Pictures\\tablet.png";
+		apart.uploadImage(imageupload1);
+		apart.selectCheckbox();
+		apart.clickOnNext();
+		apart.clickonSubmitButton();
 	}
 	/*
 	 * @Test public void verify_Parts() { HomePage hp1= new HomePage(driver);
