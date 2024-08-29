@@ -22,6 +22,8 @@ public class AddPartPage extends BasePage {
 	@FindBy(xpath="//input[@id='part_description']") WebElement txtPartDiscription;
 	@FindBy(xpath="//div[contains(@class,' livis-stepper-button-grid css-1sv3fxx')]") WebElement btnNext;
 	@FindBy(xpath="//div[@class='livis-create-part-without-edge-btn']//button[@id='livis-button-id']") WebElement btnWithoutEdge;
+	
+	
 	@FindBy(xpath="//button[contains(@class,'MuiButton-colorPrimary livis-modal-btn-round livis-modal-cancel-contained-btn css-1hw9j7s')]") WebElement btnCreate;
 	//@FindBy(xpath="//button[normalize-space()='Create']") WebElement btnCreate;
 	@FindBy(xpath="//span[normalize-space()='Click to upload']") WebElement btnClickonUploadimage;
@@ -50,7 +52,7 @@ public class AddPartPage extends BasePage {
 	
 	public void clickOnWithoutEdgeButton() {
 		
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 try {
 		    WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(btnWithoutEdge));
 		    clickableElement.click();		    

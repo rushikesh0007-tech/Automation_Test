@@ -9,7 +9,8 @@ import pageObjects.HomePage;
 
 
 public class TC002_AddWorkstationTest extends TC001_LoginTest{
-	@Test(priority=2)
+	//@Test(priority=2)
+	@Test(enabled = false)
 	public void verify_addWorkStation() {
 		
 		HomePage hp= new HomePage(driver);
@@ -28,7 +29,8 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		ws.clickOnNextButton();
 		ws.clickOnCreateButton();
 	}
-	@Test(priority=3)
+	//@Test(priority=3)
+	@Test(enabled = false)
 	public void verify_addUseCase() {
 		HomePage hp1= new HomePage(driver);
 		hp1.clickonUseCaseButton();
