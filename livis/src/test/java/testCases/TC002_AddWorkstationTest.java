@@ -9,8 +9,8 @@ import pageObjects.HomePage;
 
 
 public class TC002_AddWorkstationTest extends TC001_LoginTest{
-	//@Test(priority=2)
-	@Test(enabled = false)
+	@Test(priority=2)
+	
 	public void verify_addWorkStation() {
 		
 		HomePage hp= new HomePage(driver);
