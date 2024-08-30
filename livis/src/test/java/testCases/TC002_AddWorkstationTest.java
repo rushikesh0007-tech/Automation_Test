@@ -29,8 +29,8 @@ public class TC002_AddWorkstationTest extends TC001_LoginTest{
 		ws.clickOnNextButton();
 		ws.clickOnCreateButton();
 	}
-	//@Test(priority=3)
-	@Test(enabled = false)
+	@Test(priority=3)
+
 	public void verify_addUseCase() {
 		HomePage hp1= new HomePage(driver);
 		hp1.clickonUseCaseButton();
