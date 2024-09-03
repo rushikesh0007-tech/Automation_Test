@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-30T10:11:28 IST" name="Default suite" finished-at="2024-08-30T10:11:52 IST" duration-ms="24143">
+  <suite started-at="2024-09-03T16:56:04 IST" name="Default suite" finished-at="2024-09-03T16:56:27 IST" duration-ms="22793">
     <groups>
     </groups>
-    <test started-at="2024-08-30T10:11:28 IST" name="Default test" finished-at="2024-08-30T10:11:52 IST" duration-ms="24143">
+    <test started-at="2024-09-03T16:56:04 IST" name="Default test" finished-at="2024-09-03T16:56:27 IST" duration-ms="22793">
       <class name="testCases.TC002_AddWorkstationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-08-30T10:11:28 IST" name="setup" finished-at="2024-08-30T10:11:32 IST" duration-ms="3468" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-09-03T16:56:04 IST" name="setup" finished-at="2024-09-03T16:56:06 IST" duration-ms="1748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_Login()[pri:1, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-08-30T10:11:32 IST" name="verify_Login" finished-at="2024-08-30T10:11:32 IST" duration-ms="363" status="PASS">
+        <test-method signature="verify_Login()[pri:1, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-09-03T16:56:06 IST" name="verify_Login" finished-at="2024-09-03T16:56:06 IST" duration-ms="299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_Login -->
-        <test-method signature="verify_addWorkStation()[pri:2, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-08-30T10:11:32 IST" name="verify_addWorkStation" finished-at="2024-08-30T10:11:42 IST" duration-ms="9619" status="PASS">
+        <test-method signature="verify_addWorkStation()[pri:2, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-09-03T16:56:06 IST" name="verify_addWorkStation" finished-at="2024-09-03T16:56:15 IST" duration-ms="9161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_addWorkStation -->
-        <test-method signature="verify_addUseCase()[pri:3, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-08-30T10:11:42 IST" name="verify_addUseCase" finished-at="2024-08-30T10:11:52 IST" duration-ms="10653" status="PASS">
+        <test-method signature="verify_addUseCase()[pri:3, instance:testCases.TC002_AddWorkstationTest@16eb3ea3]" started-at="2024-09-03T16:56:15 IST" name="verify_addUseCase" finished-at="2024-09-03T16:56:27 IST" duration-ms="11551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_addUseCase -->
