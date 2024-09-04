@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,13 +25,22 @@ jobs:
       - name: Install Chrome
         run: sudo apt-get install -y google-chrome-stable
 
-      - name: Download ChromeDriver
+      - name: Install dependencies
+        run: sudo apt-get install -y libnss3 fonts-liberation
+
+      - name: Download ChromeDriver with retry
         run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip -P ~/
+          for i in {1..5}; do
+            CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+            wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip -P ~/ && break || sleep 15;
+          done
           unzip ~/chromedriver_linux64.zip -d ~/
           sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Run tests with Maven
+        run: mvn test --file livis/pom.xml
           sudo chmod +x /usr/local/bin/chromedriver
 
       - name: Run tests with Maven
