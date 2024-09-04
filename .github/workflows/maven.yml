@@ -1,6 +1,5 @@
 name: Maven CI
 
-# Trigger the workflow on push and pull request events
 on:
   push:
     branches:
@@ -9,12 +8,10 @@ on:
     branches:
       - master
 
-# Define the jobs to be run
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Set up environment variables if needed
     env:
       MAVEN_OPTS: "-Xmx1024m"
 
@@ -30,7 +27,23 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
-    # Step 3: Cache Maven dependencies to speed up the build
+    # Step 3: Install Chrome
+    - name: Install Chrome
+      run: sudo apt-get install -y google-chrome-stable
+
+    # Step 4: Install ChromeDriver
+    - name: Download ChromeDriver with retry
+      run: |
+        for i in {1..5}; do
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip -P ~/ && break || sleep 15;
+        done
+        unzip ~/chromedriver_linux64.zip -d ~/
+        sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+        sudo chmod +x /usr/local/bin/chromedriver
+
+    # Step 5: Cache Maven dependencies
     - name: Cache Maven packages
       uses: actions/cache@v3
       with:
@@ -39,11 +52,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
-    # Step 4: Install dependencies and run tests
-    - name: Build with Maven
+    # Step 6: Build with Maven and run tests
+    - name: Build and test with Maven
       run: mvn -B package --file livis/pom.xml
 
-    # Step 5: Archive test results (Optional)
+    # Step 7: Archive test results
     - name: Archive test results
       if: always()
       uses: actions/upload-artifact@v3
@@ -51,7 +64,7 @@ jobs:
         name: test-results
         path: target/surefire-reports/
 
-    # Step 6: Archive built artifacts (Optional)
+    # Step 8: Archive Maven build artifacts
     - name: Archive Maven build artifacts
       if: success()
       uses: actions/upload-artifact@v3
