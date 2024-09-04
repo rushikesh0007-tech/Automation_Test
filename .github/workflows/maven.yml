@@ -30,6 +30,19 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get install -y libnss3 fonts-liberation
 
+      # Step 5: Install ChromeDriver
+    - name: Install ChromeDriver
+      run: |
+        # Static ChromeDriver version (update as needed)
+        CHROMEDRIVER_VERSION="128.0.6613.0"
+        echo "Using ChromeDriver version: $CHROMEDRIVER_VERSION"
+
+        # Download and install ChromeDriver
+        wget -N "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -P ~/
+        unzip ~/chromedriver_linux64.zip -d ~/
+        sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+        sudo chmod +x /usr/local/bin/chromedriver
+
    
     # Step 6: Cache Maven dependencies
     - name: Cache Maven packages
