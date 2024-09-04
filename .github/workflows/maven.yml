@@ -41,7 +41,7 @@ jobs:
 
     # Step 4: Install dependencies and run tests
     - name: Build with Maven
-      run: mvn -B package --file Automation_Test/livis/pom.xml
+      run: mvn -B package --file livis/pom.xml
 
     # Step 5: Archive test results (Optional)
     - name: Archive test results
